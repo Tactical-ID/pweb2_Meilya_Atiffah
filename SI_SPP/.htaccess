@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteBase /SI_SPP/
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^home/?$ index.php?page=$1 [L]
+
+RewriteRule ^siswa/?$ views/siswa/index.php
+RewriteRule ^tambahSiswa/?$ views/siswa/tambah.php
+RewriteRule ^proses_tambahSiswa/?$ views/siswa/proses_tambah.php
+RewriteRule ^editSiswa/?$ views/siswa/edit.php
+RewriteRule ^hapusSiswa/?$ views/siswa/hapus.php
+
+RewriteRule ^pengguna/?$ views/pengguna/index.php
+RewriteRule ^tambahPengguna/?$ views/pengguna/tambah.php
+RewriteRule ^proses_tambahPengguna/?$ views/pengguna/proses_tambah.php
+RewriteRule ^editPengguna/?$ views/pengguna/edit.php
+RewriteRule ^hapusPengguna/?$ views/pengguna/hapus.php
